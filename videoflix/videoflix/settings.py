@@ -40,8 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'content.apps.ContentConfig',
     'debug_toolbar',
-    'django_rq'
+    'django_rq',
+    'import_export',
 ]
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/staticfiles')
 
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
